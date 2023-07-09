@@ -1,65 +1,90 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  .logo {
-    height: 3rem;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 80px;
-    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
-    position: fixed;
-    background-color: #fff;
-    width: 100%;
-    z-index: 1; /*ensures that it appears above the other elements*/
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo {
+  height: 3rem;
+}
+
+section {
+  padding: 10% 5%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1; /*ensures that it appears above the other elements*/
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative; /*to make the underline::after apear+*/
+  color: rgb(124, 102, 68);
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: rgb(124, 102, 68);
+  font-size: 16px;
+  font-weight: 500;  
+  transition: 0.3 ease;
+}
+
+.navbar li:hover {
+  color: rgb(99, 76, 190); 
+}
+
+.navbar li a:hover,
+.navbar li a.active { /*when were on an active page*/
+  color: rgb(99, 76, 190); 
+}
+
+.navbar li a.active::after {
+  content: ""; /*obligatory for ::after*/
+  width: 30%;
+  height: 2px;
+  background-color: rgb(99, 76, 190); 
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+@media screen and (max-width: 768px) {
   .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
-  
-  .navbar li {
-    list-style: none;
-    padding: 0 20px;
-    position: relative; /*to make the underline::after apear+*/
-    color: rgb(124, 102, 68);
+
+  .navbar.show {
+    display: block;
   }
-  
-  .navbar li a {
-    text-decoration: none;
-    color: rgb(124, 102, 68);
-    font-size: 16px;
-    font-weight: 500;  
-    transition: 0.3 ease;
+
+  .navbar.show li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgb(124, 102, 68);
   }
-  
-  .navbar li:hover {
-    color: rgb(99, 76, 190); 
+
+  .navbar.show li:last-child {
+    border-bottom: 1px solid rgb(124, 102, 68);
   }
-  
-  .navbar li a:hover,
-  .navbar li a.active { /*when were on an active page*/
-    color: rgb(99, 76, 190); 
-  }
-  
-  .navbar li a.active::after {
-    content: ""; /*obligatory for ::after*/
-    width: 30%;
-    height: 2px;
-    background-color: rgb(99, 76, 190); 
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-  }
+}
   
   /*contact*/
   section {

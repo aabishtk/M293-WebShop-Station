@@ -21,27 +21,18 @@
   </head>
   <body>
     <header>
-      <a href="/html/HomePage.html">
-        <img class="logo" src="/images/logo-station.png" />
+      <a href="/html/index.html">
+        <img class="logo" src="/images/logo-station.png"/>
       </a>
       <nav>
         <ul class="navbar">
-          <li><a href="/html/HomePage.html">home</a></li>
+          <li><a class="active" href="/html/index.html">home</a></li>
           <li><a href="/html/FullShop.html">shop</a></li>
-          <li><a href="/html/Contact.html">contact</a></li>
-          <!--only ships within switzerland-->
-          <!--icons-->
-          <li>
-            <a class="active" href="/html/Cart.html"
-              ><i class="bx bx-cart" id="cart-icon"></i
-            ></a>
-          </li>
-          <li>
-            <a href="/html/Profile/Login.html"
-              ><i class="bx bx-user" id="user-icon"></i
-            ></a>
-          </li>
-        </ul>
+          <li><a href="/html/Contact.html">contact</a></li> <!--only ships within switzerland-->
+        <!--icons-->
+        <li><a class="active" href="/html/Cart.html"><i class='bx bx-cart' id="cart-icon"></i></a></li>
+        <li><a href="/html/Profile/Login.html"><i class='bx bx-user' id="user-icon"></i></a></li>
+      </ul>
       </nav>
     </header>
     <div class="container">
@@ -61,14 +52,15 @@
         <label for="place">place</label>
         <input type="place" id="place" required>
 
-            <label for="payment">payment method</label>
-            <select id="payment" name="payment">
-              <option value="card">card</option>
-              <option value="bill">bill</option>
-              <option value="twint">twint</option>
-            </select>
-        
-        <button type="submit">Place Order</button>
+        <label for="payment">payment method</label>
+        <select id="payment" name="payment">
+            <option value="card">card</option>
+            <option value="bill">bill</option>
+            <option value="twint">twint</option>
+        </select>
+        <div class="button">
+          <button type="submit">Place Order</button>
+        </div>
       </form>
     </div>
 

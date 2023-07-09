@@ -65,6 +65,27 @@ header {
   left: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar.show {
+    display: block;
+  }
+
+  .navbar.show li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgb(124, 102, 68);
+  }
+
+  .navbar.show li:last-child {
+    border-bottom: 1px solid rgb(124, 102, 68);
+  }
+}
+
   /*products*/
   #products-container {
     padding: 5% 10%;

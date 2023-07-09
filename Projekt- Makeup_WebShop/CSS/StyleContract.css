@@ -9,6 +9,10 @@
   height: 3rem;
 }
 
+section {
+  padding: 10% 5%;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -59,6 +63,27 @@ header {
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar.show {
+    display: block;
+  }
+
+  .navbar.show li {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgb(124, 102, 68);
+  }
+
+  .navbar.show li:last-child {
+    border-bottom: 1px solid rgb(124, 102, 68);
+  }
 }
 
 /*contact*/
