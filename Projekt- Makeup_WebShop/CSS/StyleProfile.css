@@ -61,36 +61,25 @@ header {
   left: 20px;
 }
 
-/*profile*/
 .container {
   padding: 5% 10%;
 }
 
 .container h2 {
-  font-size: 5vh;
-  font-weight: 700;
-  padding-bottom: 1rem;
-  text-align: center;
-  padding-top: 2%;
-  background-image: linear-gradient(to right, #ffa7dd, #54acc6, #ffb650, #3b2f5c, #ffa7dd);
-  color: transparent;
-  -webkit-background-clip: text;
- background-clip: text;
- background-size: 200%;
- background-position: -200%;
- animation: animated-gradient 7s infinite alternate-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vh;
+  font-family: 'Inter', sans-serif;
+  margin-top: 4rem;
 }
 
- @keyframes animated-gradient{
- to {
- background-position: 200%;
-}
-}
 .container form {
   padding: 5% 0;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  align-self: center;
 }
 
 .container label {
@@ -108,14 +97,33 @@ header {
   border: 1px solid #ddd;
 }
 
-.container button[type="submit"] {
+.container p {
+  text-align: center;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.container p a {
+  color: rgb(124, 102, 68);
+  text-decoration: underline;
+}
+
+.container form button[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  padding: 0.8rem 3rem;
+  padding: 0.8rem 30%;
+  margin-top: 2rem;
+  margin: 0 auto;
+
   border: none;
   border-radius: 5px;
   cursor: pointer;
   background-image: linear-gradient(to right, #ffa7dd, #54acc6, #ffb650, #3b2f5c, #ffa7dd);
-  color: white;
   -webkit-background-clip: border-box;
   background-clip: border-box;
   background-size: 200%;
@@ -127,18 +135,4 @@ header {
   to {
     background-position: 200%;
   }
-}
-
-.container button[type="submit"]:hover {
-  background-color: #54acc6;
-}
-
-.container form p {
-  text-align: center;
-  color: #000;
-}
-
-.container form p a {
-  color: rgb(124, 102, 68);
-  text-decoration: underline;
 }
