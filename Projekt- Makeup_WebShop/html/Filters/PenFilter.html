@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <!--icon-->
+      <link rel="icon" href="/images/icon-station.png" type="image/png" />
+      <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> <!--icons for cart, heart,-->
+      <link rel="stylesheet" href="/CSS/StyleShop.css" />
+      <title>Station</title>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <header>
+        <a href="/html/HomePage.html">
+          <img class="logo" src="/images/logo-station.png"/>
+        </a>
+        <nav>
+          <ul class="navbar">
+            <li><a href="/html/HomePage.html">home</a></li>
+            <li><a class="active" href="/html/FullShop.html">shop</a></li>
+            <li><a href="/html/Contact.html">contact</a></li> <!--only ships within switzerland-->
+          <!--icons-->
+          <li><a><i class='bx bx-cart' id="cart-icon"></i></a></li>
+          <li><a href="/html/Profile/Login.html"><i class='bx bx-user' id="user-icon"></i></a></li>
+        </ul>
+        </nav>
+      </header>
+
+        <div id="products-container">
+            <h4>shop</h4>
+            <section id="filters">
+              <a href="/html/Filters/PenFilter.html">
+                <button class="active">
+                  pen
+                </button>
+              </a>
+              <a href="/html/Filters/NoteBookPaperFilter.html">
+                <button>
+                  notebook & paper
+                </button>
+              </a>
+            </section>             
+            <hr>
+          <section id="products">
+           <div class="box-container">
+            <!---->
+            <div class="box">
+              <img src="/images/products/gel-tint-intensive-pen-muji.jpg">
+              <h6>Gel Tint Intensive Pen by Muji</h6>
+              <p>3 CHF</p>
+              <a href="./Product/GelTintPen.html">
+                <button>read more</button>
+              </a>
+            </div>
+            <div class="box">
+              <img src="/images/products/gel-ballpoint-pen-muji.png">
+              <h6>Gel Ink Ballpoint Pen by Muji</h6>
+              <p>3 CHF</p>
+              <a href="./Product/BallPointPen.html">
+                <button>read more</button>
+              </a>
+            </div>
+            <!--second-->
+            <div class="box">
+              <img src="/images/products/gel-tint-intensive-smooth-pen-muji.jpg">
+              <h6>Gel Tint Intensive Smooth Pen by Muji</h6>
+              <p>3 CHF</p>
+              <a href="./Product/GelTintIntensivePen.html">
+                <button>read more</button>
+              </a>
+            </div>
+            <div class="box">
+              <img src="/images/products/refill-gel-intensive.jpg">
+              <h6>Refill Gel Tint Intensive Pen by Muji</h6>
+              <p>1.70 CHF</p>
+              <a href="./Product/RefillGelIntensive.html">
+                <button>read more</button>
+              </a>
+            </div>
+            <div class="box">
+              <img src="/images/products/caligraphy-pen.jpg">
+              <h6>Caligraphy Pen by Muji</h6>
+              <p>5 CHF</p>
+              <a href="./Product/CaligraphyPen.html">
+                <button>read more</button>
+              </a>
+            </div>
+            <div class="box">
+              <img src="/images/products/press-pencil-eraser.jpg">
+              <h6>Pressure Pencil with Eraser by Muji</h6>
+              <p>2.50 CHF</p>
+              <a href="./Product/PressurePencilEraser.html">
+                <button>read more</button>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+        <!--footer-->
+        <footer>
+          <section class="newsfilter">
+            <section class="newsfilter-container">
+              <div class="footer-icon">
+                <img src="/images/icon-station-black.png" />
+              </div>
+              <div class="newsletter-content">
+                <section id="newsletter">
+                  <h4>Get all new Updates</h4>
+                  <form id="newsletterForm">
+                    <input type="email" id="emailInput" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                  </form>
+                  <p id="newsletterMessage"></p>
+                </section>
+              </div>
+              <div class="footer-content">
+                <a href="/html/Profile/Login.html"><p>profile</p></a>
+                <a href="/html/Contact.html"><p>contact</p></a>
+                <a href="/html/FullShop.html"><p>start shopping</p></a>
+                <div class="footer-content-social">
+                  <p>follow us on our socials</p>
+                  <i class='bx bxl-instagram'></i>
+                  <i class='bx bxl-twitter' ></i>
+                  <i class='bx bxl-facebook' ></i>
+                </div>
+                <i class='bx bx-copyright' ></i>aabish
+              </div>
+            </section>
+          </section>
+        </footer>
+        
+          <script>
+            document.getElementById("newsletterForm").addEventListener("submit", function(e) {
+              e.preventDefault();
+              var emailInput = document.getElementById("emailInput");
+              var newsletterMessage = document.getElementById("newsletterMessage");
+          
+              var email = emailInput.value;
+              if (!validateEmail(email)) {
+                newsletterMessage.innerText = "Please enter a valid email address.";
+                return;
+              }
+          
+              newsletterMessage.innerText = "Thank you for subscribing to our newsletter!";
+              emailInput.value = "";
+            });
+          
+            function validateEmail(email) {
+              var regex = /\S+@\S+\.\S+/;
+              return regex.test(email);
+            }
+          </script>
+    </body>
+  </html>
+</html>

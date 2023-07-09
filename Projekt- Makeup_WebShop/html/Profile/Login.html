@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <!--icon-->
+      <link rel="icon" href="/images/icon-station.png" type="image/png" />
+      <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> <!--icons for cart, heart,-->
+      <link rel="stylesheet" href="/CSS/StyleProfile.css" />
+      <title>Station</title>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Inter&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <!--try to make the navbar responisve-->
+        <header>
+          <a href="/html/HomePage.html">
+            <img class="logo" src="/images/logo-station.png"/>
+          </a>
+          <nav>
+            <ul class="navbar">
+              <li><a href="/html/HomePage.html">home</a></li>
+              <li><a href="/html/FullShop.html">shop</a></li>
+              <li><a href="/html/Contact.html">contact</a></li> <!--only ships within switzerland-->
+            <!--icons-->
+            <li><a><i class='bx bx-cart' id="cart-icon"></i></a></li>
+            <li><a class="active" href="/html/Profile/Login.html"><i class='bx bx-user' id="user-icon"></i></a></li>
+          </ul>
+          </nav>
+        </header>
+        <div class="container">
+            <h2>Login</h2>
+            <form>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+          
+              <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="/html/Profile/Registration.html">Register</a></p>
+          </div>        
+    </body>
+  </html>
+</html>
