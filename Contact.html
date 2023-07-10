@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/icon-station.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alatsi&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/StyleContract.css" />
+    <title>Station</title>
+  </head>
+  <body>
+    <!--try to make the navbar responisve-->
+    <header>
+      <a href="/html/index.html">
+        <img class="logo" src="/images/logo-station.png"/>
+      </a>
+      <nav>
+        <ul class="navbar">
+          <li><a  href="/index.html">home</a></li>
+          <li><a href="/FullShop.html">shop</a></li>
+          <li><a class="active" href="/Contact.html">contact</a></li> <!--only ships within switzerland-->
+        <!--icons-->
+        <li><a href="/Cart.html"><i class='bx bx-cart' id="cart-icon"></i></a></li>
+        <li><a href="/Profile/Login.html"><i class='bx bx-user' id="user-icon"></i></a></li>
+      </ul>
+      </nav>
+    </header>
+
+    <section id="contact-page">
+      <h4>contact</h4>
+      <div class="team-member">
+        <img src="/images/image-myself.png" alt="Profile Image" />
+        <div class="team-member-content">
+          <h5>Aabish Tariq Khan</h5>
+          <p>
+            Aabish is the programmer of the website. The creating of the site
+            was a TBZ, a school in Zürich, project. The project is from Modul
+            293. Hopefully her teacher will give her a good grade.
+          </p>
+          <p><i class="bx bx-envelope"></i> aabish.khan@edu.tbz.ch</p>
+          <p><i class="bx bxs-phone"></i> 044 446 96 60</p>
+          <p><i class="bx bxs-pin"></i> Ausstellungsstrasse 70, 8005 Zürich</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>contact us</h2>
+        <div class="contact-form-content">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">e-mail</label>
+              <input type="text" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">subject</label>
+              <select id="subject" name="subject">
+                <option value="general enquiry">general enquiry</option>
+                <option value="order">order</option>
+                <option value="shipping">shipping</option>
+                <option value="complaint">complaint</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var subject = document.getElementById("subject").value;
+          var message = document.getElementById("message").value;
+
+          console.log("Name:", name);
+          console.log("E-mail:", email);
+          console.log("Subject:", subject);
+          console.log("Message:", message);
+
+          document.getElementById("contactForm").reset();
+        });
+    </script>
+  </body>
+</html>
